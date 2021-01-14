@@ -21,12 +21,12 @@ public class AsynExecutrorWithCompletionService {
                 System.out.println("execute-successfull-:"+result.getMessage());
             }
         } catch (InterruptedException e) {
-            System.out.println("com.yonyoucloud.upc.service.api.mcupdate.AsynExecutrorWithCompletionService.execute-error1:"+e.getMessage());
+            System.out.println("com.smoner.upc.service.api.mcupdate.AsynExecutrorWithCompletionService.execute-error1:"+e.getMessage());
             // 如果发生中断异常则重新设置线程的中断状态
             // 这样做可以让wait中的线程唤醒
             Thread.currentThread().interrupt();
         } catch (ExecutionException e) {
-            System.out.println("com.yonyoucloud.upc.service.api.mcupdate.AsynExecutrorWithCompletionService.execute-error2:"+e.getMessage());
+            System.out.println("com.smoner.upc.service.api.mcupdate.AsynExecutrorWithCompletionService.execute-error2:"+e.getMessage());
         }finally {
             executorService.shutdown();
             System.out.println("all task is over !");
